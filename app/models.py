@@ -75,10 +75,22 @@ class UserCreate(UserBase):
 
     @validator('password')
     def validate_password(cls, v):
-        if not re.search(r'(?=.*\d)', v):
+        if isinstance(v, bytes):
+            try:
+                v = v.decode('utf-8')
+            except Exception:
+                # fallback seguro
+                v = str(v)
+
+        if len(v) > 72:
+            raise ValueError("La contraseña no puede superar los 72 caracteres")
+
+        if not re.search(r'\d', v):
             raise ValueError('La contraseña debe contener al menos un número')
-        if not re.search(r'(?=.*[A-Z])', v):
+
+        if not re.search(r'[A-Z]', v):
             raise ValueError('La contraseña debe contener al menos una mayúscula')
+
         return v
 
 class UserRead(UserBase):
@@ -142,8 +154,7 @@ class TeamBase(SQLModel):
     description: Optional[str] = None
 
 class TeamCreate(TeamBase):
-    """(Schema Create) [cite: 239-242]"""
-    pokedex_entry_ids: List[int] = Field(max_length=6)
+    pokedex_entry_ids: List[int]
 
 class TeamMemberRead(SQLModel):
     """(Schema Read) Para mostrar miembros de un equipo"""
@@ -156,10 +167,9 @@ class TeamRead(TeamBase):
     id: int
     trainer_id: int
     created_at: datetime
-    members: List[TeamMemberRead] = []
+    members: List[TeamMemberRead] = Field(default_factory=list)
 
 class TeamUpdate(SQLModel):
-    """(Schema Update) Para actualizar un equipo"""
     name: Optional[str] = Field(default=None, max_length=100)
     description: Optional[str] = None
-    pokedex_entry_ids: Optional[List[int]] = Field(default=None, max_length=6)
+    pokedex_entry_ids: Optional[List[int]] = None
