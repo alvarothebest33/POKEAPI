@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Request, Query
 from sqlmodel import Session, select
 from typing import Annotated, List, Optional
-from datetime import datetime
+from datetime import datetime, timedelta
 
 #PDF
 import io
@@ -10,6 +10,9 @@ from fastapi.responses import StreamingResponse
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import cm
+
+from sqlalchemy import func, distinct
+from collections import Counter
 
 
 from app.auth import get_current_user
@@ -291,3 +294,90 @@ def export_user_pokedex_pdf(
             "Content-Disposition": f"attachment; filename={filename}"
         }
     )
+
+# Estadísticas
+@router.get("/stats", response_model=dict)
+@limiter.limit("60/minute")
+def get_pokedex_stats(
+        request: Request,
+        current_user: Annotated[User, Depends(get_current_user)],
+        session: Annotated[Session, Depends(get_session)]
+):
+
+    # Cálculos
+
+    # Contamos entradas de pokedex
+    total_pokemon = session.exec(
+        select(func.count(PokedexEntry.id))
+        .where(PokedexEntry.owner_id == current_user.id)
+    ).one()
+
+    # Contamos los capturados
+    captured = session.exec(
+        select(func.count(PokedexEntry.id))
+        .where(PokedexEntry.owner_id == current_user.id, PokedexEntry.is_captured == True)
+    ).one()
+
+    # Contamos los favoritos
+    favorites = session.exec(
+        select(func.count(PokedexEntry.id))
+        .where(PokedexEntry.owner_id == current_user.id, PokedexEntry.favorite == True)
+    ).one()
+
+    # Completo en %
+    completion_percentage = 0.0
+    if total_pokemon > 0:
+        completion_percentage = round((captured / total_pokemon) * 100, 2)
+
+
+    all_types_str = session.exec(
+        select(PokedexEntry.pokemon_types)
+        .where(PokedexEntry.owner_id == current_user.id, PokedexEntry.pokemon_types != None)
+    ).all()
+
+    all_types_list = []
+    for type_str in all_types_str:
+        all_types_list.extend(type_str.split(','))
+
+    most_common_type = None
+    if all_types_list:
+        most_common_type = Counter(all_types_list).most_common(1)[0][0]
+
+    # Racha de captura
+    capture_days_query = (
+        select(distinct(func.date(PokedexEntry.capture_date)))
+        .where(
+            PokedexEntry.owner_id == current_user.id,
+            PokedexEntry.capture_date.is_not(None)
+        )
+        .order_by(func.date(PokedexEntry.capture_date).desc())
+    )
+    capture_day_strings = session.exec(capture_days_query).all()
+
+    # Covertir de string a objeto
+    capture_dates = [datetime.strptime(d, '%Y-%m-%d').date() for d in capture_day_strings]
+
+    capture_streak_days = 0
+    today = datetime.utcnow().date()
+
+    if capture_dates:
+        if capture_dates[0] == today or capture_dates[0] == (today - timedelta(days=1)):
+            capture_streak_days = 1
+            expected_day = capture_dates[0] - timedelta(days=1)
+
+            for i in range(1, len(capture_dates)):
+                if capture_dates[i] == expected_day:
+                    capture_streak_days += 1
+                    expected_day -= timedelta(days=1)
+                else:
+                    break
+
+
+    return {
+        "total_pokemon": total_pokemon,
+        "captured": captured,
+        "favorites": favorites,
+        "completion_percentage": completion_percentage,
+        "most_common_type": most_common_type or "N/A",
+        "capture_streak_days": capture_streak_days
+    }
