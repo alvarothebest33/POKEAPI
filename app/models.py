@@ -27,7 +27,7 @@ class PokedexEntry(SQLModel, table=True):
     pokemon_id: int = Field(index=True)
     pokemon_name: str
     pokemon_sprite: str
-
+    pokemon_types: Optional[str] = Field(default=None, description="Tipos separados por coma")
     # Datos del usuario
     is_captured: bool = Field(default=False)
     capture_date: Optional[datetime] = None

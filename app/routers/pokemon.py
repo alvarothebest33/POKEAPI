@@ -160,7 +160,7 @@ def _create_pokemon_card_pdf(pokemon_data: dict, species_data: dict) -> io.Bytes
 
 
 # ENDPOINT de listar pokemon
-@router.get("/search", response_model=Dict[str, Any])
+@router.get("/search", response_model=Dict[str, Any], summary="Listar pokemon")
 @limiter.limit("30/minute")
 def call_search_pokemon(
     request: Request,
@@ -181,7 +181,7 @@ def call_search_pokemon(
         )
 
 # ENDPOINT pokemon por nombre
-@router.get("/{id_or_name}", response_model=Dict[str, Any])
+@router.get("/{id_or_name}", response_model=Dict[str, Any], summary="Buscar pokemon por nombre/id")
 @limiter.limit("60/minute")
 def call_get_pokemon_details(
     request: Request,
@@ -200,7 +200,7 @@ def call_get_pokemon_details(
         )
 
 #ENDPOINT pokemon por tipo
-@router.get("/type/{type_name}", response_model=List[Dict[str, Any]])
+@router.get("/type/{type_name}", response_model=List[Dict[str, Any]], summary="Buscar pokemon por tipo")
 @limiter.limit("60/minute")
 def call_get_pokemon_by_type(
     request: Request,
@@ -219,7 +219,7 @@ def call_get_pokemon_by_type(
         )
 
 # ENDPOINT especies
-@router.get("/pokeon-species/{id_or_name}", response_model=Dict[str, Any])
+@router.get("/pokeon-species/{id_or_name}", response_model=Dict[str, Any], summary="Buscar pokemon por especie")
 @limiter.limit("60/minute")
 def call_get_pokemon_species(
     request: Request,
@@ -238,7 +238,7 @@ def call_get_pokemon_species(
         )
 
 # ENDPOINT de carta
-@router.get("/{id_or_name}/card")
+@router.get("/{id_or_name}/card",summary="Ver carta del pokemon")
 @limiter.limit("20/minute")
 def get_pokemon_card(
         request: Request,

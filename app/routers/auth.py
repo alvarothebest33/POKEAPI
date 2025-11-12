@@ -24,7 +24,7 @@ router = APIRouter(
 
 
 # REGISTRO (funciona con JSON)
-@router.post("/register", response_model=UserRead)
+@router.post("/register", response_model=UserRead, summary="Registrarse")
 @limiter.limit("5/hour")
 def register_user(
         request: Request,
@@ -64,7 +64,7 @@ def register_user(
 
 
 # LOGIN (USA OAuth2PasswordRequestForm, NO JSON)
-@router.post("/login", response_model=Token)
+@router.post("/login", response_model=Token, summary="Iniciar sesion")
 @limiter.limit("10/minute")
 def login_for_access_token(
         request: Request,

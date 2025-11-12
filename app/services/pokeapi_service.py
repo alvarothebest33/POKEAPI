@@ -83,7 +83,8 @@ class PokeAPIService:
 
             ''' Si todo va bien, devuelve el JSON '''
             return response.json()
-
+        except HTTPException as e:
+            raise e
         except Timeout:  # Error de timeout
             logger.error(f"Timeout al consultar PokeAPI: {url}")
             raise HTTPException(
