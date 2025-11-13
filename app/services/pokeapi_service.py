@@ -65,6 +65,18 @@ def _transform_species_data(species_data: Dict[str, Any]) -> Dict[str, Any]:
         logger.error(f"Error al transformar datos de especie: {e}", exc_info=True)
         return species_data  # Devuelve datos sin procesar si falla
 
+# Para la version 2
+def _parse_evolution_chain(chain_link: dict) -> List[str]:
+    evolutions = []
+    species_name = chain_link.get('species', {}).get('name')
+    if species_name:
+        evolutions.append(species_name)
+
+    if 'evolves_to' in chain_link and chain_link['evolves_to']:
+        for next_link in chain_link['evolves_to']:
+            evolutions.extend(_parse_evolution_chain(next_link))
+
+    return evolutions
 
 class PokeAPIService:
     BASE_URL = "https://pokeapi.co/api/v2"
@@ -139,3 +151,21 @@ class PokeAPIService:
         logger.info(f"Consumiendo PokeAPI: GET {url}")
         raw_data = self._make_request(url)
         return _transform_species_data(raw_data)
+
+    @lru_cache(maxsize=64)
+    def get_evolution_chain(self, chain_url: str) -> Dict[str, Any]:
+        if not chain_url:
+            return {"chain": []}
+
+        logger.info(f"Consumiendo PokeAPI: GET {chain_url}")
+        raw_data = self._make_request(chain_url)
+
+        if not raw_data.get('chain'):
+            return {"chain": []}
+
+        try:
+            chain_list = _parse_evolution_chain(raw_data['chain'])
+            return {"chain": chain_list}
+        except Exception as e:
+            logger.error(f"Error al parsear cadena de evolución: {e}", exc_info=True)
+            return {"chain": []}
