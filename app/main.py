@@ -1,23 +1,71 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Response, status
 import uvicorn
 import logging
 from app.routers import pokemon, auth, pokedex, teams
 from app.database import create_db_and_tables
 from app import models
+from datetime import datetime
+import time
 
-from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi import Limiter
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 limiter = Limiter(key_func=get_remote_address)
 from fastapi.middleware.cors import CORSMiddleware
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('pokedex_api.log'),
+        logging.StreamHandler()
+    ]
+)
 logger = logging.getLogger("pokedex_api")
+
+
+def rate_limit_exceeded_logger(request: Request, exc: RateLimitExceeded):
+    # registra el evento
+    logger.warning(
+        f"Rate limit exceeded: "
+        f"IP {request.client.host} on path {request.url.path}. "
+        f"Limit: {exc.detail}"
+    )
+
+    # Devuelve error 429
+    return Response(
+        content=f"Demasiadas peticiones: {exc.detail}",
+        status_code=status.HTTP_429_TOO_MANY_REQUESTS
+    )
 
 app = FastAPI(
     title="Pokeapi",
     description="Plataforma para buscar y manejar tus pokemon."
 )
+
+
+# Loging
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start_time = time.time()
+
+    # Log de la petición entrante
+    logger.info(f"Request: {request.method} {request.url.path}")
+
+    # Pasa la petición al endpoint
+    response = await call_next(request)
+
+    # Calcula la duración
+    duration = time.time() - start_time
+
+    # Log de respuesta
+    logger.info(
+        f"Response: {response.status_code} | "
+        f"Duration: {duration:.3f}s"
+    )
+
+    return response
+
 
 @app.on_event("startup")
 def on_startup():
@@ -25,7 +73,7 @@ def on_startup():
     logger.info("Database iniciada con exito.")
 
 app.state.limiter = limiter
-app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_exception_handler(RateLimitExceeded, rate_limit_exceeded_logger)
 
 app.add_middleware(
     CORSMiddleware,
@@ -43,7 +91,7 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"Bienvenido a la pokeapi"}
+    return {"message": "Bienvenido a la pokeapi"}
 
 app.include_router(pokemon.router, prefix="/api/v1")
 app.include_router(auth.router)

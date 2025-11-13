@@ -1,0 +1,391 @@
+2025-11-13 17:19:43,678 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 17:19:43,679 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-13 17:19:43,679 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 17:19:43,679 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-13 17:19:43,679 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 17:19:43,680 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-13 17:19:43,680 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 17:19:43,680 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-13 17:19:43,681 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 17:19:43,681 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-13 17:19:43,681 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-13 17:19:43,756 - watchfiles.main - INFO - 5 changes detected
+2025-11-13 17:19:47,934 - pokedex_api - INFO - Request: GET /docs
+2025-11-13 17:19:47,937 - pokedex_api - INFO - Response: 200 | Duration: 0.001s
+2025-11-13 17:19:48,125 - pokedex_api - INFO - Request: GET /openapi.json
+2025-11-13 17:19:48,194 - pokedex_api - INFO - Response: 200 | Duration: 0.068s
+2025-11-13 17:20:01,959 - watchfiles.main - INFO - 1 change detected
+2025-11-13 17:20:07,895 - pokedex_api - INFO - Request: GET /
+2025-11-13 17:20:07,896 - pokedex_api - INFO - Response: 200 | Duration: 0.001s
+2025-11-13 17:20:15,718 - watchfiles.main - INFO - 1 change detected
+2025-11-13 17:20:29,334 - watchfiles.main - INFO - 1 change detected
+2025-11-13 17:29:36,077 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 17:29:36,078 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-13 17:29:36,078 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 17:29:36,078 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-13 17:29:36,078 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 17:29:36,079 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-13 17:29:36,079 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 17:29:36,079 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-13 17:29:36,079 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 17:29:36,079 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-13 17:29:36,079 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-13 17:29:38,758 - pokedex_api - INFO - Request: GET /docs
+2025-11-13 17:29:38,759 - pokedex_api - INFO - Response: 200 | Duration: 0.001s
+2025-11-13 17:29:38,859 - pokedex_api - INFO - Request: GET /openapi.json
+2025-11-13 17:29:38,916 - pokedex_api - INFO - Response: 200 | Duration: 0.057s
+2025-11-13 17:29:52,485 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 17:29:52,489 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 17:29:52,498 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 17:29:52,498 - sqlalchemy.engine.Engine - INFO - [generated in 0.00031s] ('alvaro',)
+2025-11-13 17:29:52,523 - pokedex_api - INFO - Response: 200 | Duration: 0.038s
+2025-11-13 17:29:52,524 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 17:30:06,369 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 17:30:06,371 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 17:30:06,372 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 17:30:06,372 - sqlalchemy.engine.Engine - INFO - [cached since 13.87s ago] ('alvaro',)
+2025-11-13 17:30:06,386 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 17:30:06,386 - pokedex_api - INFO - Response: 401 | Duration: 0.017s
+2025-11-13 20:29:48,104 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:29:48,105 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-13 20:29:48,105 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:29:48,107 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-13 20:29:48,107 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:29:48,108 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-13 20:29:48,108 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:29:48,108 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-13 20:29:48,108 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:29:48,108 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-13 20:29:48,108 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-13 20:29:53,286 - pokedex_api - INFO - Request: GET /docs
+2025-11-13 20:29:53,287 - pokedex_api - INFO - Response: 200 | Duration: 0.001s
+2025-11-13 20:29:53,665 - pokedex_api - INFO - Request: GET /openapi.json
+2025-11-13 20:29:53,725 - pokedex_api - INFO - Response: 200 | Duration: 0.061s
+2025-11-13 20:30:16,502 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:30:16,509 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:30:16,528 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:30:16,529 - sqlalchemy.engine.Engine - INFO - [generated in 0.00068s] ('alvaro',)
+2025-11-13 20:30:16,556 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'alvaro' desde la IP 127.0.0.1
+2025-11-13 20:30:16,557 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:30:16,558 - pokedex_api - INFO - Response: 401 | Duration: 0.056s
+2025-11-13 20:36:10,168 - watchfiles.main - INFO - 3 changes detected
+2025-11-13 20:39:46,566 - watchfiles.main - INFO - 4 changes detected
+2025-11-13 20:39:49,623 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:39:50,098 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:40:04,675 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:40:19,725 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:40:34,827 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:40:49,914 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:41:01,460 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:41:13,532 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:41:15,152 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:41:51,302 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:42:01,337 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:42:12,692 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:42:15,881 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:42:27,604 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:43:42,598 - watchfiles.main - INFO - 3 changes detected
+2025-11-13 20:43:44,550 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:43:57,264 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:44:00,260 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:44:16,456 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:44:22,171 - watchfiles.main - INFO - 3 changes detected
+2025-11-13 20:44:23,924 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:44:23,953 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:44:23,953 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-13 20:44:23,953 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:44:23,954 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-13 20:44:23,954 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:44:23,954 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-13 20:44:23,955 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:44:23,955 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-13 20:44:23,955 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:44:23,955 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-13 20:44:23,955 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-13 20:44:24,292 - watchfiles.main - INFO - 6 changes detected
+2025-11-13 20:44:37,191 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:44:52,250 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:45:07,331 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:45:08,696 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:45:13,493 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:45:13,494 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-13 20:45:13,494 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:45:13,495 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-13 20:45:13,495 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:45:13,495 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-13 20:45:13,495 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:45:13,495 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-13 20:45:13,495 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:45:13,495 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-13 20:45:13,495 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-13 20:45:57,044 - pokedex_api - INFO - Request: GET /docs
+2025-11-13 20:45:57,046 - pokedex_api - INFO - Response: 200 | Duration: 0.002s
+2025-11-13 20:45:57,142 - pokedex_api - INFO - Request: GET /openapi.json
+2025-11-13 20:45:57,196 - pokedex_api - INFO - Response: 200 | Duration: 0.054s
+2025-11-13 20:46:04,581 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:04,587 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:04,611 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:04,611 - sqlalchemy.engine.Engine - INFO - [generated in 0.00078s] ('string',)
+2025-11-13 20:46:04,613 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:04,614 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:04,614 - pokedex_api - INFO - Response: 401 | Duration: 0.033s
+2025-11-13 20:46:07,417 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:07,420 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:07,421 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:07,421 - sqlalchemy.engine.Engine - INFO - [cached since 2.81s ago] ('string',)
+2025-11-13 20:46:07,422 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:07,422 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:07,423 - pokedex_api - INFO - Response: 401 | Duration: 0.006s
+2025-11-13 20:46:07,880 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:07,884 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:07,884 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:07,885 - sqlalchemy.engine.Engine - INFO - [cached since 3.274s ago] ('string',)
+2025-11-13 20:46:07,885 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:07,886 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:07,887 - pokedex_api - INFO - Response: 401 | Duration: 0.007s
+2025-11-13 20:46:08,267 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:08,270 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:08,270 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:08,270 - sqlalchemy.engine.Engine - INFO - [cached since 3.66s ago] ('string',)
+2025-11-13 20:46:08,271 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:08,272 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:08,273 - pokedex_api - INFO - Response: 401 | Duration: 0.005s
+2025-11-13 20:46:08,601 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:08,605 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:08,605 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:08,605 - sqlalchemy.engine.Engine - INFO - [cached since 3.995s ago] ('string',)
+2025-11-13 20:46:08,606 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:08,606 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:08,607 - pokedex_api - INFO - Response: 401 | Duration: 0.006s
+2025-11-13 20:46:08,943 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:08,946 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:08,947 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:08,947 - sqlalchemy.engine.Engine - INFO - [cached since 4.336s ago] ('string',)
+2025-11-13 20:46:08,948 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:08,948 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:08,949 - pokedex_api - INFO - Response: 401 | Duration: 0.006s
+2025-11-13 20:46:09,310 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:09,313 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:09,314 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:09,314 - sqlalchemy.engine.Engine - INFO - [cached since 4.703s ago] ('string',)
+2025-11-13 20:46:09,315 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:09,316 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:09,317 - pokedex_api - INFO - Response: 401 | Duration: 0.007s
+2025-11-13 20:46:09,701 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:09,704 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:09,704 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:09,704 - sqlalchemy.engine.Engine - INFO - [cached since 5.094s ago] ('string',)
+2025-11-13 20:46:09,705 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:09,705 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:09,706 - pokedex_api - INFO - Response: 401 | Duration: 0.005s
+2025-11-13 20:46:10,055 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:10,060 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:10,060 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:10,061 - sqlalchemy.engine.Engine - INFO - [cached since 5.45s ago] ('string',)
+2025-11-13 20:46:10,062 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:10,062 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:10,063 - pokedex_api - INFO - Response: 401 | Duration: 0.008s
+2025-11-13 20:46:10,467 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:10,472 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:46:10,473 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:46:10,473 - sqlalchemy.engine.Engine - INFO - [cached since 5.862s ago] ('string',)
+2025-11-13 20:46:10,474 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:46:10,475 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:46:10,476 - pokedex_api - INFO - Response: 401 | Duration: 0.009s
+2025-11-13 20:46:10,848 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:46:10,851 - slowapi - WARNING - ratelimit 10 per 1 minute (127.0.0.1) exceeded at endpoint: /api/v1/auth/login
+2025-11-13 20:46:10,853 - pokedex_api - WARNING - Rate limit exceeded: IP 127.0.0.1 on path /api/v1/auth/login. Limit: 10 per 1 minute
+2025-11-13 20:46:10,853 - pokedex_api - INFO - Response: 429 | Duration: 0.005s
+2025-11-13 20:47:32,789 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:32,792 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:32,792 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:32,792 - sqlalchemy.engine.Engine - INFO - [cached since 88.18s ago] ('string',)
+2025-11-13 20:47:32,792 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:32,793 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:32,794 - pokedex_api - INFO - Response: 401 | Duration: 0.005s
+2025-11-13 20:47:36,058 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:36,068 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:36,068 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:36,068 - sqlalchemy.engine.Engine - INFO - [cached since 91.46s ago] ('string',)
+2025-11-13 20:47:36,069 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:36,070 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:36,070 - pokedex_api - INFO - Response: 401 | Duration: 0.012s
+2025-11-13 20:47:36,636 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:36,639 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:36,640 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:36,640 - sqlalchemy.engine.Engine - INFO - [cached since 92.03s ago] ('string',)
+2025-11-13 20:47:36,640 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:36,641 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:36,642 - pokedex_api - INFO - Response: 401 | Duration: 0.006s
+2025-11-13 20:47:37,065 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:37,068 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:37,068 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:37,068 - sqlalchemy.engine.Engine - INFO - [cached since 92.46s ago] ('string',)
+2025-11-13 20:47:37,069 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:37,069 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:37,070 - pokedex_api - INFO - Response: 401 | Duration: 0.005s
+2025-11-13 20:47:37,416 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:37,419 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:37,420 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:37,420 - sqlalchemy.engine.Engine - INFO - [cached since 92.81s ago] ('string',)
+2025-11-13 20:47:37,420 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:37,421 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:37,421 - pokedex_api - INFO - Response: 401 | Duration: 0.006s
+2025-11-13 20:47:37,792 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:37,796 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:37,796 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:37,796 - sqlalchemy.engine.Engine - INFO - [cached since 93.19s ago] ('string',)
+2025-11-13 20:47:37,797 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:37,798 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:37,799 - pokedex_api - INFO - Response: 401 | Duration: 0.007s
+2025-11-13 20:47:38,136 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:38,139 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:38,140 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:38,140 - sqlalchemy.engine.Engine - INFO - [cached since 93.53s ago] ('string',)
+2025-11-13 20:47:38,140 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:38,141 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:38,141 - pokedex_api - INFO - Response: 401 | Duration: 0.005s
+2025-11-13 20:47:38,484 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:38,488 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:38,489 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:38,489 - sqlalchemy.engine.Engine - INFO - [cached since 93.88s ago] ('string',)
+2025-11-13 20:47:38,489 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:38,490 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:38,490 - pokedex_api - INFO - Response: 401 | Duration: 0.006s
+2025-11-13 20:47:38,819 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:38,824 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:38,824 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:38,824 - sqlalchemy.engine.Engine - INFO - [cached since 94.21s ago] ('string',)
+2025-11-13 20:47:38,824 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:38,826 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:38,827 - pokedex_api - INFO - Response: 401 | Duration: 0.007s
+2025-11-13 20:47:39,172 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:39,175 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:47:39,176 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-13 20:47:39,176 - sqlalchemy.engine.Engine - INFO - [cached since 94.57s ago] ('string',)
+2025-11-13 20:47:39,176 - app.routers.auth - WARNING - Fallo de autenticación: Intento de login para el usuario 'string' desde la IP 127.0.0.1
+2025-11-13 20:47:39,177 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 20:47:39,177 - pokedex_api - INFO - Response: 401 | Duration: 0.005s
+2025-11-13 20:47:39,520 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-13 20:47:39,523 - slowapi - WARNING - ratelimit 10 per 1 minute (127.0.0.1) exceeded at endpoint: /api/v1/auth/login
+2025-11-13 20:47:39,524 - pokedex_api - WARNING - Rate limit exceeded: IP 127.0.0.1 on path /api/v1/auth/login. Limit: 10 per 1 minute
+2025-11-13 20:47:39,524 - pokedex_api - INFO - Response: 429 | Duration: 0.004s
+2025-11-13 20:59:14,708 - watchfiles.main - INFO - 3 changes detected
+2025-11-13 20:59:54,864 - watchfiles.main - INFO - 1 change detected
+2025-11-13 20:59:55,452 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 20:59:55,453 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-13 20:59:55,453 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:59:55,453 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-13 20:59:55,453 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:59:55,453 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-13 20:59:55,453 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:59:55,453 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-13 20:59:55,454 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 20:59:55,454 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-13 20:59:55,454 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-13 20:59:55,526 - watchfiles.main - INFO - 6 changes detected
+2025-11-13 20:59:59,017 - watchfiles.main - INFO - 1 change detected
+2025-11-13 21:00:25,307 - watchfiles.main - INFO - 3 changes detected
+2025-11-13 21:01:11,504 - watchfiles.main - INFO - 1 change detected
+2025-11-13 21:01:12,062 - watchfiles.main - INFO - 1 change detected
+2025-11-13 21:01:16,664 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 21:01:16,665 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-13 21:01:16,665 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 21:01:16,665 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-13 21:01:16,665 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 21:01:16,665 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-13 21:01:16,666 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 21:01:16,666 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-13 21:01:16,666 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 21:01:16,666 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-13 21:01:16,666 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-13 21:01:16,718 - watchfiles.main - INFO - 5 changes detected
+2025-11-13 21:01:24,896 - pokedex_api - INFO - Request: GET /docs
+2025-11-13 21:01:24,897 - pokedex_api - INFO - Response: 200 | Duration: 0.000s
+2025-11-13 21:01:24,990 - pokedex_api - INFO - Request: GET /openapi.json
+2025-11-13 21:01:25,042 - pokedex_api - INFO - Response: 200 | Duration: 0.052s
+2025-11-13 21:01:48,025 - pokedex_api - INFO - Request: POST /api/v1/auth/register
+2025-11-13 21:01:48,031 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 21:01:48,056 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ? OR user.email = ?
+2025-11-13 21:01:48,056 - sqlalchemy.engine.Engine - INFO - [generated in 0.00079s] ('holaqtal', 'alvaro')
+2025-11-13 21:01:48,085 - sqlalchemy.engine.Engine - INFO - INSERT INTO user (username, email, hashed_password, created_at, is_active) VALUES (?, ?, ?, ?, ?)
+2025-11-13 21:01:48,085 - sqlalchemy.engine.Engine - INFO - [generated in 0.00060s] ('holaqtal', 'alvaro', '$pbkdf2-sha256$29000$b83ZO0cI4TwnZMw5x9jb2w$cnBFkRgRAkOXUKVTWzZtPEtO.K0xOos7jKT1ha3Lx0g', '2025-11-13 20:01:48.082261', 1)
+2025-11-13 21:01:48,088 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-13 21:01:48,095 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 21:01:48,100 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.id = ?
+2025-11-13 21:01:48,100 - sqlalchemy.engine.Engine - INFO - [generated in 0.00035s] (2,)
+2025-11-13 21:01:48,104 - pokedex_api - INFO - Response: 200 | Duration: 0.079s
+2025-11-13 21:01:48,104 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-13 21:01:48,196 - watchfiles.main - INFO - 3 changes detected
+2025-11-13 21:02:08,509 - pokedex_api - INFO - Request: POST /api/v1/auth/register
+2025-11-13 21:02:08,511 - pokedex_api - ERROR - Validation Error en POST /api/v1/auth/register: [{'type': 'value_error', 'loc': ('body', 'password'), 'msg': 'Value error, La contraseña debe contener al menos un número', 'input': 'Contrasena', 'ctx': {'error': ValueError('La contraseña debe contener al menos un número')}}]
+2025-11-13 21:02:28,793 - pokedex_api - INFO - Request: POST /api/v1/auth/register
+2025-11-13 21:02:28,794 - pokedex_api - ERROR - Validation Error en POST /api/v1/auth/register: [{'type': 'value_error', 'loc': ('body', 'password'), 'msg': 'Value error, La contraseña debe contener al menos un número', 'input': 'Contrasena', 'ctx': {'error': ValueError('La contraseña debe contener al menos un número')}}]
+2025-11-13 21:03:02,902 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-13 21:03:02,902 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-13 21:03:02,902 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 21:03:02,903 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-13 21:03:02,903 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 21:03:02,903 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-13 21:03:02,903 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 21:03:02,903 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-13 21:03:02,903 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-13 21:03:02,903 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-13 21:03:02,903 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-13 21:03:02,973 - watchfiles.main - INFO - 5 changes detected
+2025-11-13 21:03:08,652 - pokedex_api - INFO - Request: GET /docs
+2025-11-13 21:03:08,653 - pokedex_api - INFO - Response: 200 | Duration: 0.001s
+2025-11-13 21:03:08,763 - pokedex_api - INFO - Request: GET /openapi.json
+2025-11-13 21:03:08,821 - pokedex_api - INFO - Response: 200 | Duration: 0.058s
+2025-11-13 21:03:26,733 - pokedex_api - INFO - Request: POST /api/v1/auth/register
+2025-11-13 21:03:26,735 - pokedex_api - INFO - Response: 422 | Duration: 0.003s

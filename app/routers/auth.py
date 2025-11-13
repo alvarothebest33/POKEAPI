@@ -3,6 +3,7 @@ from sqlmodel import Session, select
 from typing import Annotated
 
 from fastapi.security import OAuth2PasswordRequestForm
+import logging
 
 from app.auth import (
     get_password_hash,
@@ -16,6 +17,7 @@ from slowapi import Limiter
 from slowapi.util import get_remote_address
 
 limiter = Limiter(key_func=get_remote_address)
+logger = logging.getLogger(__name__)
 
 router = APIRouter(
     prefix="/api/v1/auth",
@@ -77,6 +79,11 @@ def login_for_access_token(
 
     # Verificación segura
     if not user or not verify_password(form_data.password, user.hashed_password):
+        logger.warning(
+            f"Fallo de autenticación: "
+            f"Intento de login para el usuario '{form_data.username}' "
+            f"desde la IP {request.client.host}"
+        )
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Nombre de usuario o contraseña incorrectos",
