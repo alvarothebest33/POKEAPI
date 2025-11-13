@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 import uvicorn
 import logging
-from app.routers import pokemon, auth, pokedex
+from app.routers import pokemon, auth, pokedex, teams
 from app.database import create_db_and_tables
 from app import models
 
@@ -46,6 +46,7 @@ def read_root():
 app.include_router(pokemon.router, prefix="/api/v1")
 app.include_router(auth.router)
 app.include_router(pokedex.router)
+app.include_router(teams.router)
 
 if __name__ == "__main__":
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)

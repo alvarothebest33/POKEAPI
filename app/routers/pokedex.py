@@ -123,6 +123,7 @@ def add_pokemon_to_pokedex(
             raise e
 
     # Crear base de datos
+    stats = pokemon_data.get("stats", {})
     db_entry = PokedexEntry(
         owner_id=current_user.id,
         pokemon_id=entry_create.pokemon_id,
@@ -131,7 +132,12 @@ def add_pokemon_to_pokedex(
 
         pokemon_name=pokemon_data.get("name"),
         pokemon_sprite=pokemon_data.get("sprite"),
-        pokemon_types=",".join(pokemon_data.get("types", []))
+        pokemon_types=",".join(pokemon_data.get("types", [])),
+
+        hp = stats.get("hp"),
+        attack = stats.get("attack"),
+        defense = stats.get("defense"),
+        speed = stats.get("speed")
     )
 
     session.add(db_entry)

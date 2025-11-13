@@ -28,6 +28,10 @@ class PokedexEntry(SQLModel, table=True):
     pokemon_name: str
     pokemon_sprite: str
     pokemon_types: Optional[str] = Field(default=None, description="Tipos separados por coma")
+    hp: Optional[int] = Field(default=None)
+    attack: Optional[int] = Field(default=None)
+    defense: Optional[int] = Field(default=None)
+    speed: Optional[int] = Field(default=None)
     # Datos del usuario
     is_captured: bool = Field(default=False)
     capture_date: Optional[datetime] = None
@@ -125,12 +129,17 @@ class PokedexEntryRead(SQLModel):
     pokemon_name: str
     pokemon_sprite: str
     pokemon_types: Optional[str]
+    hp: Optional[int] = Field(default=None)
+    attack: Optional[int] = Field(default=None)
+    defense: Optional[int] = Field(default=None)
+    speed: Optional[int] = Field(default=None)
     is_captured: bool
     capture_date: Optional[datetime]
     nickname: Optional[str]
     notes: Optional[str]
     favorite: bool
     created_at: datetime
+
 
 class PokedexEntryCreate(SQLModel):
     """(Schema Create) Para añadir un Pokémon [cite: 193-197]"""
