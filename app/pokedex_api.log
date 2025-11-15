@@ -497,3 +497,452 @@ WHERE user.username = ?
 2025-11-13 23:33:17,693 - app.services.pokeapi_service - INFO - Consumiendo PokeAPI: GET https://pokeapi.co/api/v2/pokemon/charizard
 2025-11-13 23:33:17,819 - pokedex_api - INFO - Response: 200 | Duration: 0.129s
 2025-11-13 23:33:17,819 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:09:51,172 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:09:51,173 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-15 12:09:51,173 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-15 12:09:51,174 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-15 12:09:51,174 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-15 12:09:51,174 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-15 12:09:51,174 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-15 12:09:51,174 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-15 12:09:51,174 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-15 12:09:51,174 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:09:51,174 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-15 12:09:54,108 - pokedex_api - INFO - Request: GET /docs
+2025-11-15 12:09:54,109 - pokedex_api - INFO - Response: 200 | Duration: 0.000s
+2025-11-15 12:09:54,580 - pokedex_api - INFO - Request: GET /openapi.json
+2025-11-15 12:09:54,659 - pokedex_api - INFO - Response: 200 | Duration: 0.079s
+2025-11-15 12:10:57,984 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:10:57,984 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("user")
+2025-11-15 12:10:57,984 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-15 12:10:57,985 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("pokedexentry")
+2025-11-15 12:10:57,985 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-15 12:10:57,985 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("team")
+2025-11-15 12:10:57,985 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-15 12:10:57,985 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("teammember")
+2025-11-15 12:10:57,985 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-11-15 12:10:57,985 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:10:57,986 - pokedex_api - INFO - Database iniciada con exito.
+2025-11-15 12:10:58,029 - watchfiles.main - INFO - 5 changes detected
+2025-11-15 12:11:00,354 - pokedex_api - INFO - Request: GET /docs
+2025-11-15 12:11:00,355 - pokedex_api - INFO - Response: 200 | Duration: 0.001s
+2025-11-15 12:11:00,393 - pokedex_api - INFO - Request: GET /openapi.json
+2025-11-15 12:11:00,443 - pokedex_api - INFO - Response: 200 | Duration: 0.050s
+2025-11-15 12:11:16,061 - pokedex_api - INFO - Request: GET /api/v1/pokemon/66
+2025-11-15 12:11:16,061 - pokedex_api - INFO - Response: 401 | Duration: 0.001s
+2025-11-15 12:11:38,788 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-15 12:11:38,796 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:11:38,811 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:11:38,812 - sqlalchemy.engine.Engine - INFO - [generated in 0.00031s] ('alvaro',)
+2025-11-15 12:11:38,860 - pokedex_api - INFO - Response: 200 | Duration: 0.072s
+2025-11-15 12:11:38,862 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:11:50,770 - pokedex_api - INFO - Request: POST /api/v1/auth/login
+2025-11-15 12:11:50,773 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:11:50,773 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:11:50,773 - sqlalchemy.engine.Engine - INFO - [cached since 11.96s ago] ('alvaro',)
+2025-11-15 12:11:50,792 - pokedex_api - INFO - Response: 200 | Duration: 0.022s
+2025-11-15 12:11:50,793 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:12:00,929 - pokedex_api - INFO - Request: GET /api/v1/pokemon/85/card
+2025-11-15 12:12:00,930 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:12:00,931 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:12:00,931 - sqlalchemy.engine.Engine - INFO - [cached since 22.12s ago] ('alvaro',)
+2025-11-15 12:12:00,932 - app.services.pokeapi_service - INFO - Consumiendo PokeAPI: GET https://pokeapi.co/api/v2/pokemon/85
+2025-11-15 12:12:01,111 - app.services.pokeapi_service - INFO - Consumiendo PokeAPI: GET https://pokeapi.co/api/v2/pokemon-species/85
+2025-11-15 12:12:01,515 - pokedex_api - INFO - Response: 200 | Duration: 0.586s
+2025-11-15 12:12:01,542 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:12:31,041 - pokedex_api - INFO - Request: GET /api/v1/pokedex/
+2025-11-15 12:12:31,042 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:12:31,043 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:12:31,043 - sqlalchemy.engine.Engine - INFO - [cached since 52.23s ago] ('alvaro',)
+2025-11-15 12:12:31,046 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? ORDER BY pokedexentry.pokemon_id ASC NULLS FIRST
+ LIMIT ? OFFSET ?
+2025-11-15 12:12:31,046 - sqlalchemy.engine.Engine - INFO - [generated in 0.00019s] (1, 20, 0)
+2025-11-15 12:12:31,048 - pokedex_api - INFO - Response: 200 | Duration: 0.007s
+2025-11-15 12:12:31,049 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:12:45,496 - pokedex_api - INFO - Request: GET /api/v1/pokedex/stats
+2025-11-15 12:12:45,498 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:12:45,498 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:12:45,498 - sqlalchemy.engine.Engine - INFO - [cached since 66.69s ago] ('alvaro',)
+2025-11-15 12:12:45,503 - sqlalchemy.engine.Engine - INFO - SELECT count(pokedexentry.id) AS count_1 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ?
+2025-11-15 12:12:45,503 - sqlalchemy.engine.Engine - INFO - [generated in 0.00044s] (1,)
+2025-11-15 12:12:45,505 - sqlalchemy.engine.Engine - INFO - SELECT count(pokedexentry.id) AS count_1 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.is_captured = 1
+2025-11-15 12:12:45,505 - sqlalchemy.engine.Engine - INFO - [generated in 0.00018s] (1,)
+2025-11-15 12:12:45,506 - sqlalchemy.engine.Engine - INFO - SELECT count(pokedexentry.id) AS count_1 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.favorite = 1
+2025-11-15 12:12:45,507 - sqlalchemy.engine.Engine - INFO - [generated in 0.00037s] (1,)
+2025-11-15 12:12:45,508 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.pokemon_types 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.pokemon_types IS NOT NULL
+2025-11-15 12:12:45,509 - sqlalchemy.engine.Engine - INFO - [generated in 0.00056s] (1,)
+2025-11-15 12:12:45,512 - sqlalchemy.engine.Engine - INFO - SELECT DISTINCT date(pokedexentry.capture_date) AS anon_1 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.capture_date IS NOT NULL ORDER BY date(pokedexentry.capture_date) DESC
+2025-11-15 12:12:45,512 - sqlalchemy.engine.Engine - INFO - [generated in 0.00035s] (1,)
+2025-11-15 12:12:45,514 - pokedex_api - INFO - Response: 200 | Duration: 0.019s
+2025-11-15 12:12:45,515 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:14:18,901 - pokedex_api - INFO - Request: GET /api/v1/pokemon/Azumarill
+2025-11-15 12:14:18,903 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:14:18,903 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:14:18,903 - sqlalchemy.engine.Engine - INFO - [cached since 160.1s ago] ('alvaro',)
+2025-11-15 12:14:18,905 - app.services.pokeapi_service - INFO - Consumiendo PokeAPI: GET https://pokeapi.co/api/v2/pokemon/Azumarill
+2025-11-15 12:14:19,634 - pokedex_api - INFO - Response: 200 | Duration: 0.733s
+2025-11-15 12:14:19,634 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:14:33,417 - pokedex_api - INFO - Request: POST /api/v1/pokedex/
+2025-11-15 12:14:33,419 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:14:33,419 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:14:33,419 - sqlalchemy.engine.Engine - INFO - [cached since 174.6s ago] ('alvaro',)
+2025-11-15 12:14:33,422 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.pokemon_id = ?
+2025-11-15 12:14:33,423 - sqlalchemy.engine.Engine - INFO - [generated in 0.00039s] (1, 184)
+2025-11-15 12:14:33,423 - app.services.pokeapi_service - INFO - Consumiendo PokeAPI: GET https://pokeapi.co/api/v2/pokemon/184
+2025-11-15 12:14:33,510 - sqlalchemy.engine.Engine - INFO - INSERT INTO pokedexentry (owner_id, pokemon_id, pokemon_name, pokemon_sprite, pokemon_types, hp, attack, defense, speed, is_captured, capture_date, nickname, notes, favorite, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-15 12:14:33,510 - sqlalchemy.engine.Engine - INFO - [generated in 0.00035s] (1, 184, 'azumarill', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/184.png', 'water,fairy', 100, 50, 80, 50, 0, None, 'string', None, 0, '2025-11-15 11:14:33.506467')
+2025-11-15 12:14:33,514 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:14:33,524 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:14:33,529 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:14:33,533 - sqlalchemy.engine.Engine - INFO - [generated in 0.00071s] (8,)
+2025-11-15 12:14:33,536 - pokedex_api - INFO - Response: 200 | Duration: 0.119s
+2025-11-15 12:14:33,537 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:14:33,581 - watchfiles.main - INFO - 3 changes detected
+2025-11-15 12:14:39,303 - pokedex_api - INFO - Request: POST /api/v1/pokedex/
+2025-11-15 12:14:39,304 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:14:39,305 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:14:39,305 - sqlalchemy.engine.Engine - INFO - [cached since 180.5s ago] ('alvaro',)
+2025-11-15 12:14:39,307 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.pokemon_id = ?
+2025-11-15 12:14:39,307 - sqlalchemy.engine.Engine - INFO - [cached since 5.885s ago] (1, 184)
+2025-11-15 12:14:39,308 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:14:39,308 - pokedex_api - INFO - Response: 400 | Duration: 0.005s
+2025-11-15 12:14:48,374 - pokedex_api - INFO - Request: POST /api/v1/pokedex/
+2025-11-15 12:14:48,377 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:14:48,377 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:14:48,378 - sqlalchemy.engine.Engine - INFO - [cached since 189.6s ago] ('alvaro',)
+2025-11-15 12:14:48,380 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.pokemon_id = ?
+2025-11-15 12:14:48,381 - sqlalchemy.engine.Engine - INFO - [cached since 14.96s ago] (1, 184)
+2025-11-15 12:14:48,382 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:14:48,383 - pokedex_api - INFO - Response: 400 | Duration: 0.009s
+2025-11-15 12:15:09,505 - pokedex_api - INFO - Request: GET /api/v1/pokemon/Milotic
+2025-11-15 12:15:09,507 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:15:09,507 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:15:09,507 - sqlalchemy.engine.Engine - INFO - [cached since 210.7s ago] ('alvaro',)
+2025-11-15 12:15:09,509 - app.services.pokeapi_service - INFO - Consumiendo PokeAPI: GET https://pokeapi.co/api/v2/pokemon/Milotic
+2025-11-15 12:15:10,028 - pokedex_api - INFO - Response: 200 | Duration: 0.522s
+2025-11-15 12:15:10,029 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:15:18,985 - pokedex_api - INFO - Request: POST /api/v1/pokedex/
+2025-11-15 12:15:18,986 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:15:18,987 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:15:18,987 - sqlalchemy.engine.Engine - INFO - [cached since 220.2s ago] ('alvaro',)
+2025-11-15 12:15:18,989 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.pokemon_id = ?
+2025-11-15 12:15:18,989 - sqlalchemy.engine.Engine - INFO - [cached since 45.57s ago] (1, 350)
+2025-11-15 12:15:18,990 - app.services.pokeapi_service - INFO - Consumiendo PokeAPI: GET https://pokeapi.co/api/v2/pokemon/350
+2025-11-15 12:15:19,090 - sqlalchemy.engine.Engine - INFO - INSERT INTO pokedexentry (owner_id, pokemon_id, pokemon_name, pokemon_sprite, pokemon_types, hp, attack, defense, speed, is_captured, capture_date, nickname, notes, favorite, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-15 12:15:19,090 - sqlalchemy.engine.Engine - INFO - [cached since 45.58s ago] (1, 350, 'milotic', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/350.png', 'water', 95, 60, 79, 81, 0, None, 'string', None, 0, '2025-11-15 11:15:19.089704')
+2025-11-15 12:15:19,094 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:15:19,099 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:15:19,099 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:15:19,100 - sqlalchemy.engine.Engine - INFO - [cached since 45.57s ago] (9,)
+2025-11-15 12:15:19,102 - pokedex_api - INFO - Response: 200 | Duration: 0.117s
+2025-11-15 12:15:19,102 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:15:19,170 - watchfiles.main - INFO - 3 changes detected
+2025-11-15 12:15:32,380 - pokedex_api - INFO - Request: GET /api/v1/pokemon/Blastoise
+2025-11-15 12:15:32,383 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:15:32,384 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:15:32,384 - sqlalchemy.engine.Engine - INFO - [cached since 233.6s ago] ('alvaro',)
+2025-11-15 12:15:32,386 - app.services.pokeapi_service - INFO - Consumiendo PokeAPI: GET https://pokeapi.co/api/v2/pokemon/Blastoise
+2025-11-15 12:15:33,131 - pokedex_api - INFO - Response: 200 | Duration: 0.751s
+2025-11-15 12:15:33,132 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:15:43,416 - pokedex_api - INFO - Request: POST /api/v1/pokedex/
+2025-11-15 12:15:43,418 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:15:43,419 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:15:43,419 - sqlalchemy.engine.Engine - INFO - [cached since 244.6s ago] ('alvaro',)
+2025-11-15 12:15:43,421 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.pokemon_id = ?
+2025-11-15 12:15:43,421 - sqlalchemy.engine.Engine - INFO - [cached since 70s ago] (1, 9)
+2025-11-15 12:15:43,421 - app.services.pokeapi_service - INFO - Consumiendo PokeAPI: GET https://pokeapi.co/api/v2/pokemon/9
+2025-11-15 12:15:43,533 - sqlalchemy.engine.Engine - INFO - INSERT INTO pokedexentry (owner_id, pokemon_id, pokemon_name, pokemon_sprite, pokemon_types, hp, attack, defense, speed, is_captured, capture_date, nickname, notes, favorite, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-15 12:15:43,533 - sqlalchemy.engine.Engine - INFO - [cached since 70.02s ago] (1, 9, 'blastoise', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png', 'water', 79, 83, 100, 78, 0, None, 'string', None, 0, '2025-11-15 11:15:43.532359')
+2025-11-15 12:15:43,537 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:15:43,543 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:15:43,544 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:15:43,544 - sqlalchemy.engine.Engine - INFO - [cached since 70.02s ago] (10,)
+2025-11-15 12:15:43,550 - pokedex_api - INFO - Response: 200 | Duration: 0.134s
+2025-11-15 12:15:43,551 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:15:43,613 - watchfiles.main - INFO - 3 changes detected
+2025-11-15 12:15:55,056 - pokedex_api - INFO - Request: GET /api/v1/pokedex/
+2025-11-15 12:15:55,058 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:15:55,059 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:15:55,059 - sqlalchemy.engine.Engine - INFO - [cached since 256.2s ago] ('alvaro',)
+2025-11-15 12:15:55,062 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? ORDER BY pokedexentry.pokemon_id ASC NULLS FIRST
+ LIMIT ? OFFSET ?
+2025-11-15 12:15:55,062 - sqlalchemy.engine.Engine - INFO - [cached since 204s ago] (1, 20, 0)
+2025-11-15 12:15:55,064 - pokedex_api - INFO - Response: 200 | Duration: 0.007s
+2025-11-15 12:15:55,064 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:16:26,397 - pokedex_api - INFO - Request: GET /api/v1/pokedex/stats
+2025-11-15 12:16:26,400 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:16:26,400 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:16:26,400 - sqlalchemy.engine.Engine - INFO - [cached since 287.6s ago] ('alvaro',)
+2025-11-15 12:16:26,402 - sqlalchemy.engine.Engine - INFO - SELECT count(pokedexentry.id) AS count_1 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ?
+2025-11-15 12:16:26,402 - sqlalchemy.engine.Engine - INFO - [cached since 220.9s ago] (1,)
+2025-11-15 12:16:26,403 - sqlalchemy.engine.Engine - INFO - SELECT count(pokedexentry.id) AS count_1 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.is_captured = 1
+2025-11-15 12:16:26,403 - sqlalchemy.engine.Engine - INFO - [cached since 220.9s ago] (1,)
+2025-11-15 12:16:26,404 - sqlalchemy.engine.Engine - INFO - SELECT count(pokedexentry.id) AS count_1 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.favorite = 1
+2025-11-15 12:16:26,404 - sqlalchemy.engine.Engine - INFO - [cached since 220.9s ago] (1,)
+2025-11-15 12:16:26,405 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.pokemon_types 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.pokemon_types IS NOT NULL
+2025-11-15 12:16:26,405 - sqlalchemy.engine.Engine - INFO - [cached since 220.9s ago] (1,)
+2025-11-15 12:16:26,406 - sqlalchemy.engine.Engine - INFO - SELECT DISTINCT date(pokedexentry.capture_date) AS anon_1 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.capture_date IS NOT NULL ORDER BY date(pokedexentry.capture_date) DESC
+2025-11-15 12:16:26,406 - sqlalchemy.engine.Engine - INFO - [cached since 220.9s ago] (1,)
+2025-11-15 12:16:26,407 - pokedex_api - INFO - Response: 200 | Duration: 0.010s
+2025-11-15 12:16:26,408 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:17:56,269 - pokedex_api - INFO - Request: POST /api/v1/teams/
+2025-11-15 12:17:56,271 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:17:56,271 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:17:56,271 - sqlalchemy.engine.Engine - INFO - [cached since 377.5s ago] ('alvaro',)
+2025-11-15 12:17:56,273 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.id IN (?, ?, ?, ?) AND pokedexentry.is_captured = 1
+2025-11-15 12:17:56,273 - sqlalchemy.engine.Engine - INFO - [generated in 0.00019s] (1, 7, 8, 9, 10)
+2025-11-15 12:17:56,276 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:17:56,277 - pokedex_api - INFO - Response: 404 | Duration: 0.007s
+2025-11-15 12:18:23,964 - pokedex_api - INFO - Request: PATCH /api/v1/pokedex/7
+2025-11-15 12:18:23,967 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:23,968 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:18:23,968 - sqlalchemy.engine.Engine - INFO - [cached since 405.2s ago] ('alvaro',)
+2025-11-15 12:18:23,975 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:23,975 - sqlalchemy.engine.Engine - INFO - [generated in 0.00068s] (7,)
+2025-11-15 12:18:23,981 - sqlalchemy.engine.Engine - INFO - UPDATE pokedexentry SET capture_date=?, nickname=?, notes=?, favorite=? WHERE pokedexentry.id = ?
+2025-11-15 12:18:23,981 - sqlalchemy.engine.Engine - INFO - [generated in 0.00068s] ('2025-11-15 11:18:08.186000', 'string', 'string', 1, 7)
+2025-11-15 12:18:23,984 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:18:23,991 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:23,992 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:23,992 - sqlalchemy.engine.Engine - INFO - [cached since 230.5s ago] (7,)
+2025-11-15 12:18:23,994 - pokedex_api - INFO - Response: 200 | Duration: 0.031s
+2025-11-15 12:18:23,996 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:18:24,080 - watchfiles.main - INFO - 3 changes detected
+2025-11-15 12:18:33,215 - pokedex_api - INFO - Request: PATCH /api/v1/pokedex/8
+2025-11-15 12:18:33,217 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:33,217 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:18:33,217 - sqlalchemy.engine.Engine - INFO - [cached since 414.4s ago] ('alvaro',)
+2025-11-15 12:18:33,219 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:33,220 - sqlalchemy.engine.Engine - INFO - [cached since 9.245s ago] (8,)
+2025-11-15 12:18:33,222 - sqlalchemy.engine.Engine - INFO - UPDATE pokedexentry SET is_captured=?, capture_date=?, notes=?, favorite=? WHERE pokedexentry.id = ?
+2025-11-15 12:18:33,222 - sqlalchemy.engine.Engine - INFO - [generated in 0.00021s] (1, '2025-11-15 11:18:08.186000', 'string', 1, 8)
+2025-11-15 12:18:33,224 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:18:33,228 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:33,228 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:33,228 - sqlalchemy.engine.Engine - INFO - [cached since 239.7s ago] (8,)
+2025-11-15 12:18:33,229 - pokedex_api - INFO - Response: 200 | Duration: 0.014s
+2025-11-15 12:18:33,230 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:18:33,280 - watchfiles.main - INFO - 3 changes detected
+2025-11-15 12:18:36,787 - pokedex_api - INFO - Request: PATCH /api/v1/pokedex/9
+2025-11-15 12:18:36,790 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:36,791 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:18:36,791 - sqlalchemy.engine.Engine - INFO - [cached since 418s ago] ('alvaro',)
+2025-11-15 12:18:36,794 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:36,794 - sqlalchemy.engine.Engine - INFO - [cached since 12.82s ago] (9,)
+2025-11-15 12:18:36,796 - sqlalchemy.engine.Engine - INFO - UPDATE pokedexentry SET is_captured=?, capture_date=?, notes=?, favorite=? WHERE pokedexentry.id = ?
+2025-11-15 12:18:36,796 - sqlalchemy.engine.Engine - INFO - [cached since 3.575s ago] (1, '2025-11-15 11:18:08.186000', 'string', 1, 9)
+2025-11-15 12:18:36,800 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:18:36,807 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:36,807 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:36,808 - sqlalchemy.engine.Engine - INFO - [cached since 243.3s ago] (9,)
+2025-11-15 12:18:36,809 - pokedex_api - INFO - Response: 200 | Duration: 0.021s
+2025-11-15 12:18:36,809 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:18:36,881 - watchfiles.main - INFO - 3 changes detected
+2025-11-15 12:18:40,918 - pokedex_api - INFO - Request: PATCH /api/v1/pokedex/10
+2025-11-15 12:18:40,921 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:40,921 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:18:40,922 - sqlalchemy.engine.Engine - INFO - [cached since 422.1s ago] ('alvaro',)
+2025-11-15 12:18:40,925 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:40,925 - sqlalchemy.engine.Engine - INFO - [cached since 16.95s ago] (10,)
+2025-11-15 12:18:40,926 - sqlalchemy.engine.Engine - INFO - UPDATE pokedexentry SET is_captured=?, capture_date=?, notes=?, favorite=? WHERE pokedexentry.id = ?
+2025-11-15 12:18:40,927 - sqlalchemy.engine.Engine - INFO - [cached since 7.705s ago] (1, '2025-11-15 11:18:08.186000', 'string', 1, 10)
+2025-11-15 12:18:40,930 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:18:40,939 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:40,940 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:40,941 - sqlalchemy.engine.Engine - INFO - [cached since 247.4s ago] (10,)
+2025-11-15 12:18:40,944 - pokedex_api - INFO - Response: 200 | Duration: 0.026s
+2025-11-15 12:18:40,944 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:18:40,991 - watchfiles.main - INFO - 3 changes detected
+2025-11-15 12:18:47,041 - pokedex_api - INFO - Request: POST /api/v1/teams/
+2025-11-15 12:18:47,045 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:47,045 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:18:47,045 - sqlalchemy.engine.Engine - INFO - [cached since 428.2s ago] ('alvaro',)
+2025-11-15 12:18:47,048 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id, pokedexentry.owner_id, pokedexentry.pokemon_id, pokedexentry.pokemon_name, pokedexentry.pokemon_sprite, pokedexentry.pokemon_types, pokedexentry.hp, pokedexentry.attack, pokedexentry.defense, pokedexentry.speed, pokedexentry.is_captured, pokedexentry.capture_date, pokedexentry.nickname, pokedexentry.notes, pokedexentry.favorite, pokedexentry.created_at 
+FROM pokedexentry 
+WHERE pokedexentry.owner_id = ? AND pokedexentry.id IN (?, ?, ?, ?) AND pokedexentry.is_captured = 1
+2025-11-15 12:18:47,048 - sqlalchemy.engine.Engine - INFO - [cached since 50.78s ago] (1, 7, 8, 9, 10)
+2025-11-15 12:18:47,051 - sqlalchemy.engine.Engine - INFO - INSERT INTO team (trainer_id, name, description, created_at) VALUES (?, ?, ?, ?)
+2025-11-15 12:18:47,051 - sqlalchemy.engine.Engine - INFO - [generated in 0.00029s] (1, 'azul', 'los de agua', '2025-11-15 11:18:47.049455')
+2025-11-15 12:18:47,054 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:18:47,059 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:47,062 - sqlalchemy.engine.Engine - INFO - SELECT team.id, team.trainer_id, team.name, team.description, team.created_at 
+FROM team 
+WHERE team.id = ?
+2025-11-15 12:18:47,062 - sqlalchemy.engine.Engine - INFO - [generated in 0.00059s] (3,)
+2025-11-15 12:18:47,066 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:47,066 - sqlalchemy.engine.Engine - INFO - [generated in 0.00054s] (7,)
+2025-11-15 12:18:47,068 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:47,069 - sqlalchemy.engine.Engine - INFO - [cached since 0.003105s ago] (8,)
+2025-11-15 12:18:47,070 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:47,071 - sqlalchemy.engine.Engine - INFO - [cached since 0.005186s ago] (9,)
+2025-11-15 12:18:47,073 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:18:47,073 - sqlalchemy.engine.Engine - INFO - [cached since 0.007568s ago] (10,)
+2025-11-15 12:18:47,077 - sqlalchemy.engine.Engine - INFO - INSERT INTO teammember (team_id, pokedex_entry_id, position) VALUES (?, ?, ?) RETURNING id
+2025-11-15 12:18:47,077 - sqlalchemy.engine.Engine - INFO - [generated in 0.00027s (insertmanyvalues) 1/4 (ordered; batch not supported)] (3, 7, 1)
+2025-11-15 12:18:47,080 - sqlalchemy.engine.Engine - INFO - INSERT INTO teammember (team_id, pokedex_entry_id, position) VALUES (?, ?, ?) RETURNING id
+2025-11-15 12:18:47,081 - sqlalchemy.engine.Engine - INFO - [insertmanyvalues 2/4 (ordered; batch not supported)] (3, 8, 2)
+2025-11-15 12:18:47,081 - sqlalchemy.engine.Engine - INFO - INSERT INTO teammember (team_id, pokedex_entry_id, position) VALUES (?, ?, ?) RETURNING id
+2025-11-15 12:18:47,081 - sqlalchemy.engine.Engine - INFO - [insertmanyvalues 3/4 (ordered; batch not supported)] (3, 9, 3)
+2025-11-15 12:18:47,082 - sqlalchemy.engine.Engine - INFO - INSERT INTO teammember (team_id, pokedex_entry_id, position) VALUES (?, ?, ?) RETURNING id
+2025-11-15 12:18:47,082 - sqlalchemy.engine.Engine - INFO - [insertmanyvalues 4/4 (ordered; batch not supported)] (3, 10, 4)
+2025-11-15 12:18:47,083 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-11-15 12:18:47,092 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:18:47,093 - sqlalchemy.engine.Engine - INFO - SELECT team.id, team.trainer_id, team.name, team.description, team.created_at 
+FROM team 
+WHERE team.id = ?
+2025-11-15 12:18:47,093 - sqlalchemy.engine.Engine - INFO - [cached since 0.03107s ago] (3,)
+2025-11-15 12:18:47,096 - pokedex_api - INFO - Response: 200 | Duration: 0.054s
+2025-11-15 12:18:47,097 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:18:47,145 - watchfiles.main - INFO - 3 changes detected
+2025-11-15 12:19:12,748 - pokedex_api - INFO - Request: GET /api/v1/teams/0/export
+2025-11-15 12:19:12,750 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:19:12,750 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:19:12,750 - sqlalchemy.engine.Engine - INFO - [cached since 453.9s ago] ('alvaro',)
+2025-11-15 12:19:12,752 - sqlalchemy.engine.Engine - INFO - SELECT team.id AS team_id, team.trainer_id AS team_trainer_id, team.name AS team_name, team.description AS team_description, team.created_at AS team_created_at 
+FROM team 
+WHERE team.id = ?
+2025-11-15 12:19:12,753 - sqlalchemy.engine.Engine - INFO - [generated in 0.00020s] (0,)
+2025-11-15 12:19:12,753 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-11-15 12:19:12,754 - pokedex_api - INFO - Response: 404 | Duration: 0.006s
+2025-11-15 12:19:29,976 - pokedex_api - INFO - Request: GET /api/v1/teams/3/export
+2025-11-15 12:19:29,977 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-11-15 12:19:29,978 - sqlalchemy.engine.Engine - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.created_at, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-11-15 12:19:29,978 - sqlalchemy.engine.Engine - INFO - [cached since 471.2s ago] ('alvaro',)
+2025-11-15 12:19:29,979 - sqlalchemy.engine.Engine - INFO - SELECT team.id AS team_id, team.trainer_id AS team_trainer_id, team.name AS team_name, team.description AS team_description, team.created_at AS team_created_at 
+FROM team 
+WHERE team.id = ?
+2025-11-15 12:19:29,980 - sqlalchemy.engine.Engine - INFO - [cached since 17.23s ago] (3,)
+2025-11-15 12:19:29,982 - sqlalchemy.engine.Engine - INFO - SELECT teammember.id AS teammember_id, teammember.team_id AS teammember_team_id, teammember.pokedex_entry_id AS teammember_pokedex_entry_id, teammember.position AS teammember_position 
+FROM teammember 
+WHERE ? = teammember.team_id
+2025-11-15 12:19:29,982 - sqlalchemy.engine.Engine - INFO - [generated in 0.00022s] (3,)
+2025-11-15 12:19:29,984 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:19:29,985 - sqlalchemy.engine.Engine - INFO - [cached since 66.01s ago] (7,)
+2025-11-15 12:19:29,986 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:19:29,986 - sqlalchemy.engine.Engine - INFO - [cached since 66.01s ago] (8,)
+2025-11-15 12:19:29,987 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:19:29,987 - sqlalchemy.engine.Engine - INFO - [cached since 66.01s ago] (9,)
+2025-11-15 12:19:29,988 - sqlalchemy.engine.Engine - INFO - SELECT pokedexentry.id AS pokedexentry_id, pokedexentry.owner_id AS pokedexentry_owner_id, pokedexentry.pokemon_id AS pokedexentry_pokemon_id, pokedexentry.pokemon_name AS pokedexentry_pokemon_name, pokedexentry.pokemon_sprite AS pokedexentry_pokemon_sprite, pokedexentry.pokemon_types AS pokedexentry_pokemon_types, pokedexentry.hp AS pokedexentry_hp, pokedexentry.attack AS pokedexentry_attack, pokedexentry.defense AS pokedexentry_defense, pokedexentry.speed AS pokedexentry_speed, pokedexentry.is_captured AS pokedexentry_is_captured, pokedexentry.capture_date AS pokedexentry_capture_date, pokedexentry.nickname AS pokedexentry_nickname, pokedexentry.notes AS pokedexentry_notes, pokedexentry.favorite AS pokedexentry_favorite, pokedexentry.created_at AS pokedexentry_created_at 
+FROM pokedexentry 
+WHERE pokedexentry.id = ?
+2025-11-15 12:19:29,988 - sqlalchemy.engine.Engine - INFO - [cached since 66.01s ago] (10,)
+2025-11-15 12:19:30,276 - pokedex_api - INFO - Response: 200 | Duration: 0.300s
+2025-11-15 12:19:30,334 - sqlalchemy.engine.Engine - INFO - ROLLBACK

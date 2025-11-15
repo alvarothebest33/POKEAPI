@@ -26,10 +26,8 @@ from app.models import (
 )
 from app.services.pokeapi_service import PokeAPIService
 
-from slowapi import Limiter
-from slowapi.util import get_remote_address
+from app.dependencies import limiter
 
-limiter = Limiter(key_func=get_remote_address)
 
 
 router = APIRouter(

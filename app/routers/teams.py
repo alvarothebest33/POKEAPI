@@ -1,16 +1,16 @@
-from fastapi import APIRouter, Depends, HTTPException, status, Request, logger
+from fastapi import APIRouter, Depends, HTTPException, status, Request
 from sqlmodel import Session, select
-from typing import Annotated, List, Optional
+from typing import Annotated, List
+import logging
 
 #PDF
 import io
 import requests
 from fastapi.responses import StreamingResponse
-from PIL import Image # Para manejar las imágenes
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import cm
-from reportlab.lib.colors import black, white, lightgrey, grey
+from reportlab.lib.colors import grey
 from reportlab.lib.utils import ImageReader
 
 from app.auth import get_current_user
@@ -27,11 +27,8 @@ from app.models import (
     TeamUpdate
 )
 
-from slowapi import Limiter
-from slowapi.util import get_remote_address
-
-limiter = Limiter(key_func=get_remote_address)
-
+from app.dependencies import limiter
+logger = logging.getLogger(__name__)
 
 router = APIRouter(
     prefix="/api/v1/teams",
@@ -57,7 +54,7 @@ def _draw_pokemon_mini_card(c, x, y, width, height, entry: PokedexEntry):
             sprite = ImageReader(sprite_image_data)
             c.drawImage(sprite, x + (0.3 * cm), y + height - (3 * cm), width=2.5 * cm, height=2.5 * cm,
                         preserveAspectRatio=True, mask='auto')
-        except Exception:
+        except requests.exceptions.RequestException:
             pass  # No se pudo cargar el sprite
 
     # --- Contenido de la mini-ficha ---

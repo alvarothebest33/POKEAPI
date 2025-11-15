@@ -14,15 +14,14 @@ from fastapi.responses import StreamingResponse
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import cm
-from reportlab.lib.colors import black, white, lightgrey, grey
+from reportlab.lib.colors import black, lightgrey, grey
 from reportlab.lib.utils import ImageReader
 import textwrap
 
 
-from slowapi import Limiter
-from slowapi.util import get_remote_address
+from app.dependencies import limiter
 logger = logging.getLogger(__name__)
-limiter = Limiter(key_func=get_remote_address)
+
 
 router = APIRouter(
     prefix="/pokemon",

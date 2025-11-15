@@ -13,10 +13,9 @@ from app.auth import (
 )
 from app.database import get_session
 from app.models import User, UserCreate, UserRead, Token
-from slowapi import Limiter
-from slowapi.util import get_remote_address
 
-limiter = Limiter(key_func=get_remote_address)
+from app.dependencies import limiter
+
 logger = logging.getLogger(__name__)
 
 router = APIRouter(
