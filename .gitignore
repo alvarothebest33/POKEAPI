@@ -1,0 +1,23 @@
+# Entorno virtual
+.venv/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+
+# Archivos sensibles (¡El más importante!)
+.env
+
+# Archivos de BBDD locales
+pokedex.db
+*.db
+
+# Archivos de logs
+*.log
+
+# Archivos de cobertura de tests
+.pytest_cache/
+.coverage
+
+# Archivos del editor (PyCharm)
+.idea/
