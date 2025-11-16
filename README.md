@@ -4,6 +4,10 @@
 Esto es una FastAPI para buscar pokemon, crearte tu propia pokedex, crearte 
 tu equipo de batalla soñado y modificarlo cuando quieras. Además, podras descargar tus cartas pokemon y tus
 tu PDF de cada equipo.
+
+## Enlace video exlicativo
+https://www.loom.com/share/94249c46e926453983de42a5e2052bb1
+
 ## Instalación
 Pasos para instalarlo:
 1. Clonar el repositorio.
@@ -89,4 +93,5 @@ Cuando llegue la fecha de borrado se eliminaran los ruters.
 En un futuro se podría realizar un sistema refresh token en lugar de utilizar tokens de 24h
 También me gustaría la opción de poder conectarte con usuarios para luchar entre tu equipo y el suyo. Así sería algo más divertida la api
 y supondría una rivalidad y diversión entre los grupos de amigos.
+
 
